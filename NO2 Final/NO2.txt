@@ -1,0 +1,43 @@
+code for real data analysis I: No2 data
+Notes for data set: 8 column
+C1: response, hourly values of the logarithm of the concentration of NO2(particles)
+C2: logarithm of the number of cars per hour
+C3:  temperature 2 meters above ground
+C4:  wind spped
+C5:  temperature differencebetween 25 and 2 meters above ground
+C6:  wind direction
+C7:  U, hours of day
+C8:   day number
+% aim 
+resort this data set into a time series and 
+select covariates: wind speed, log car numbers, and difference of temperature
+covariates are transformed on [0,1]
+
+Script:
+1、NO2.m: main procedure generate Figure 4 and Figure 5 of this paper
+
+Function:
+2、mysort.m: resort orginal data in time order
+3、deriveSCAD.m: compute the value of SCAD penality function
+4、StepIest.m: consstruct initial estimation of Step I
+5、Spest.m: three-step spline estimators for full model with selected three covariates
+6、myknot.m: select optimal knots in varying-coefficient additive function under specified order of
+                  B-spline and gruops
+7、myknot_vca.m: select  optimal knots  among choice for groups and order of B-spline in initial estimation
+8、tune_StageI.m: choose optimal tuning parameter in Stage I of model identification
+9、tune_StageII.m: choose optimal tuning parameter in Stage II of model identification
+10、optimtune.m: choose optimal tuning parameter in model identification
+11、add_est: estimating additive model
+12、cofi_add.m: compute bootstrap confidence interval for constant term under AM
+13、plot_RM.m: plot curves under reduced model
+14、plotpre.m:  compare  of one-step ahead prediction
+15、RM.m: reduced model: alp0 is time variant and other varying-coefficent functions
+                    are constants
+16、RM_test.m: return one-step  prediction and prediction error
+17、pre_RM.m:  one-step ahead forecasting under RM
+18、BivEst.m: spline estimators of bivariate functions
+19、Bivknot.m: optimal knots of bivaraite spline estimation
+20、bootCri.m: compute critial value and p value based on bootatrap sampling
+21、 mytest.m: test statistic value
+22、pred_RMest.m: estimation of reduced model at give grid points
+23、rsplin.m and rspline2.m

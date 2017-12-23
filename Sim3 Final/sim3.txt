@@ -1,0 +1,29 @@
+Code for for Example 3: two-stage model identification procedure
+
+There are 3 data sets: 
+Dat1,  Dat2 and Dat3 are data for Table 3 and Table 4,
+My1, My2 and My3 are respective monte carlo replication of response  
+
+Script:
+1、sim3.m: main procedure for simulation 1(Table 3 and Table 4)
+2、writeDat.m: generate the data
+
+function:
+3、mydata3.m: data generating process
+4、rspline.m, rspline2.m : generate B-spline
+5、deriveSCAD.m: derative of SCAD penalty function
+6、Spest.m: Spline estimation for component functions of varying-coefficient additive function
+7、Oracle_est.m: oracle estimation of varying-coefficient functions and additive functions
+8、myknot.m: select optimal knots in varying-coefficient additive function under specified order of
+                  B-spline and gruops
+9、myknot_vca.m: select  optimal knots  among choice for groups and order of B-spline in initial estimation
+10、tune_StageI.m: Penalized estimation for varying-coefficient fnctions (Stage I) 
+11、tune_StageII.m: Penalized estimation for additivet fnctions (Stage II) 
+12、optimtune.m: choose optimal tuning parameter in model identification
+13、Msecomp.m: comparison of mse of estimation for three different model 
+14、Mytest.m��classify the additive terms and varying terms as well as true model
+
+Result: (1) variable "mseMat" print Table 3 of Example 3
+           (2) variable "testMat"  print Table 4 of Example 3
+           (3) variable "paramat" print optimal parameters in Table 3 of Example 3
+ 

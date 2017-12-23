@@ -1,0 +1,37 @@
+%real data analysis: NASDAQ Composite index spanning from 2000/01 to 2011/12. 
+Notes for data set: 
+response: high-low
+covariates: x1: high-low at previous day
+                  x2: daily return at previous day
+covariates are centered
+
+Script:
+1、INDEX.m: Vogt data set
+
+Function:
+2、rspline.m, rspline2.m: generate Bspline matrix and its the first  derivative matrix
+3、deriveSCAD.m: compute the value of SCAD penality function
+4、StepIest.m: construct initial estimation of Step I
+5、Spest.m: three-step spline estimators for full model with selected three covariates
+6、myknot_vca1.m and myknot.m: select  optimal knots  
+7、knot_vc.m: choose optimal knots number of varying-coefficient model
+8、knot_add.m: choose optimal knots number of additive model
+9、vcm.m: varying-coefficient model estimation
+10、add_est.m: additive model estimation
+11、RM.m: resduced model estimation
+12、tune_StageI.m: choose optimal tuning parameter in Stage I of model identification
+13、tune_StageII.m: choose optimal tuning parameter in Stage II of model identification
+14、optimtune.m: choose optimal tuning parameter in model identification
+15、StepIpre.m:  initial estimation of Step I in one-step ahead forecasting
+16、Sp_test.m: one-step ahead forecasting under VCAM
+17、pred_RMest: estimating at given grid points under redecued model
+18、plotseries.m: time series plot 
+19、plot_RMest.m: plot  fitted curves under additive model
+20、plotRMsurf.m: plot estimated surface under redecued model
+21、plotpre.m:  compare  of one-step ahead prediction
+22、Bivknot.m: decide the optimal knots of estimation under time-varying additive model
+23、BivEst.m:  bivariate spline estimation
+24、mytest.: compute test statistics
+25、bootCri: critical value based on bootstrap samples
+
+print: Figure 4 -- 7

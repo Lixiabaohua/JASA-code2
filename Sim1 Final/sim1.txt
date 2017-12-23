@@ -1,0 +1,49 @@
+%simulation for Example 1��three-step spline estimators)
+
+There are 4 data sets: 
+Dat1,  Dat2 and Dat3 are data for Table 1 in body and Table 1 --2 in the supplementary materials
+My1, My2 and My3 are respective monte carlo replication of response 
+Dat4  are used to plot Figure 1 - 2  in body and Figure 1 - 2 in the supplementary materials
+
+Script:
+1、sim1.m: main procedure for simulation 1 
+2、writeDat.m: generate the data sets (Monte Carlo replicatons: 1000)
+
+function:
+3、autoreg1.m:generate locally stationally process
+4、mydata1.m: data generating process
+5、rspline.m: generate B-spline matrix
+6、Spest.m: Three-step Spline estimation for component functions of varying-coefficient 
+               and  additive function
+7、Oracle_est.m: oracle estimation of varying-coefficient functions and additive functions
+8、Mis_est.m: misspecified spline estimation of varying-coefficient model and additive model
+9、myknot.m: select optimal knots in varying-coefficient additive function under specified order of
+                  B-spline and gruops
+10、myknot_vca.m: select  optimal knots  among choice for groups and order of B-spline in initial estimation
+11、Msecomp.m: comparison of mse of estimation for three different model and oracle estimation
+12、MontY.m: generate Monte Carlo simulation of response
+13、SpestP.m: corresponding spline estimation of VCA to prection 
+14、Sp_test.m: corresponding to prection
+15、mis_Pest.m:  spline estimation of misspecified model (VCM and AM) corresponding to prection
+16、mis_test.m:  one-step-ahead prediction of misspecified model (VCM and AM) corresponding to prection 
+17、mse_Pre.m: mse in prediction
+18、IterSpest.m: iterative of three spline estimations
+19、IterMse.m:  MSE's comparison of multi-step iterative of three-step spline estimators
+20、bifun.m: generate true function value at given grid points
+21、pred_est.m: estimate component functions at given grid points
+22、plotbandC.m: plot Figure 1 in paper
+23、plotsurf.m:   plot Figure 2 in paper
+24、plotboot.m: study the empirical distribution of bootstrap statistic
+25、myplot.m: plot Figure 1-3 in Sim 1
+26、estStd.m: estimated standard deviation of random errors based on 1000 Monte Carlo replications
+27、estVar.m:  estimated asymptotic variance of univariate component functions
+
+
+results: (1) variable "MseMat" print Table 1
+            (2) variable "PreMat" print Table 2
+            (3) variable "IterMat" print Table 3
+            (4) variable "paraMat" print optimal parameter in Table 1 
+
+folds: figBand--- stores figures of confidence bands 
+         figdistri---stores figures of distributions of bootstrap statistics
+         figSurf--- stores figures of surfaces

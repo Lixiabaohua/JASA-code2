@@ -1,0 +1,28 @@
+Code for Example 2 
+There are 3 data sets: 
+Dat1,  Dat2 and Dat3 are data for Table and power function figures
+Table 2 in the body : power of the test under different  sample sizes and alternatives
+
+Script:
+1、sim2.m: main procedure for simulation of seperable testing
+2、writeDat.m: generate the data sets (three sets)
+
+function:
+3、autoreg1.m:   generate locally stationally process
+4、mydata2.m:   data generating process
+5、rspline.m:      generate B-spline matrix
+6、Spest.m:        Three-step Spline estimation for component functions of varying-coefficient 
+                          and  additive function
+7、myknot.m:     select optimal knots in varying-coefficient additive function under specified order of
+                          B-spline and gruops
+8、myknot_vca.m: select  optimal knots  among choice for groups and order of B-spline in initial estimation
+9、plotDiff.m:        plot the regression curves under null and alternative hypothesis testing for simple case
+     (as an exercise
+10、BivEst.m:        spine estimations of bivariate functions
+11、Bivknot.m:     optimal knots for bivariate spline estimations
+12、mytest.m:      construct test statistic
+13、mypower.m:  compute the power 
+14、plotdensity.m: plot power function and density of test statistics based on Monte Carlo replications
+       and bootstrap approximations
+
+Print: MatPower  gives the comparisons of power
